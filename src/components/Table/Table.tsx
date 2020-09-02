@@ -79,8 +79,8 @@ const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
 
     const items = useMemo(() => {
         fadeOutBody()
-        let sortedProducts = [...data];
-        sortedProducts.sort((a, b) => {
+        let sortedItems = [...data];
+        sortedItems.sort((a, b) => {
             if (a[sortKey] < b[sortKey]) {
                 return sortDirection === 'ascending' ? -1 : 1;
             }
@@ -90,7 +90,7 @@ const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
             return 0;
         });
         setTimeout(fadeInBody, 500)
-        return sortedProducts;
+        return sortedItems;
     }, [data, sortDirection, sortKey]);
 
     return (

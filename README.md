@@ -1,0 +1,1 @@
+# table-last-column-sticky

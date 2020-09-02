@@ -19,6 +19,7 @@ interface THeadProps {
 }
 
 const THead = ({columns, requestSort}: THeadProps) => {
+    // Todo: add icon sorting direction indicators
     const getColumn = (column: Column, columnIndex: number) => {
         if (column.sort) {
             return (

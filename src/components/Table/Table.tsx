@@ -42,8 +42,8 @@ const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
     const [animating, setAnimating] = useState(false);
     const [lastColumnSticky, setLastColumnSticky] = useState(false)
     const [animationComplete, setAnimationCompleted] = useState(false);
-    const [sortKey, setSortKey] = useState();
-    const [sortDirection, setSortDirection] = useState();
+    const [sortKey, setSortKey] = useState('');
+    const [sortDirection, setSortDirection] = useState('');
     const table = createRef<HTMLTableElement>()
 
     const checkTableOverlapping = () => {
@@ -71,7 +71,9 @@ const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
         if (sortKey === column.dataField && sortDirection === 'ascending') {
             direction = 'descending';
         }
-        setSortKey(column.dataField)
+        if(column.dataField) {
+            setSortKey(column.dataField)
+        }
         setSortDirection(direction)
     }
 

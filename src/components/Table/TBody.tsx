@@ -7,6 +7,13 @@ type BodyStyleProps = {
     animationComplete: boolean
 }
 
+type TBodyProps = {
+    columns: Column[],
+    data: any[],
+    animating: boolean,
+    animationComplete: boolean
+}
+
 const TableBody = styled.tbody<BodyStyleProps>`
     opacity: ${(props) => (!props.animating || props.animationComplete) ? 1 : 0};
     ${props => props.animationComplete && css`
@@ -14,7 +21,7 @@ const TableBody = styled.tbody<BodyStyleProps>`
     `}
 `
 
-const TBody = ({columns, data, animating, animationComplete}: { columns: Column[], data: any[], animating: boolean, animationComplete: boolean }) => {
+const TBody = ({columns, data, animating, animationComplete}: TBodyProps) => {
     const cell = (row: any, column: Column, columnIndex: number) => {
         if (!column.dataField) return
         return (

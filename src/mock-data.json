@@ -1,0 +1,154 @@
+{
+  "columns": [
+    {
+      "header": "No.",
+      "dataField": "id",
+      "width": "100px"
+    },
+    {
+      "header": "First name",
+      "dataField": "first_name",
+      "width": "100px",
+      "sort": true
+    },
+    {
+      "header": "Last name",
+      "dataField": "last_name",
+      "width": "100px",
+      "sort": true
+    },
+    {
+      "header": "January",
+      "dataField": "january",
+      "width": "100px"
+    },
+    {
+      "header": "February",
+      "dataField": "february",
+      "width": "100px"
+    },
+    {
+      "header": "March",
+      "dataField": "march",
+      "width": "100px"
+    },
+    {
+      "header": "April",
+      "dataField": "april",
+      "width": "100px"
+    },
+    {
+      "header": "May",
+      "dataField": "may",
+      "width": "100px"
+    },
+    {
+      "header": "June",
+      "dataField": "june",
+      "width": "100px"
+    },
+    {
+      "header": "Income",
+      "dataField": "income",
+      "width": "100px"
+    }
+  ],
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Przemysław",
+      "last_name": "Duda",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 2,
+      "first_name": "Klimek",
+      "last_name": "Olszewski",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 3,
+      "first_name": "Sayed",
+      "last_name": "Booth",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 4,
+      "first_name": "Yusef",
+      "last_name": "Quintero",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 5,
+      "first_name": "Aasiyah",
+      "last_name": "Bird",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 6,
+      "first_name": "Jody",
+      "last_name": "Prentice",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 7,
+      "first_name": "Armani",
+      "last_name": "Carroll",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    },
+    {
+      "id": 8,
+      "first_name": "Lilianna",
+      "last_name": "Martinez",
+      "january": 123.23,
+      "february": 12.32,
+      "march": 123.25,
+      "april": 23.52,
+      "may": 58.23,
+      "june": 93.23,
+      "income": 433.78
+    }
+  ]
+}

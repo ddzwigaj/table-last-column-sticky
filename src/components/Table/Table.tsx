@@ -1,5 +1,6 @@
 import React, {useState, createRef, useEffect, useMemo} from 'react'
 import styled, {css} from 'styled-components'
+import debounce from 'lodash/throttle'
 
 import THead from "./THead";
 import TBody from "./TBody";
@@ -35,10 +36,6 @@ const TableContainer = styled.table<{ lastColumnSticky: boolean }>`
 `
 
 const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
-    useEffect(() => {
-        checkTableOverlapping()
-        // TODO: on resize event handler
-    }, [])
     const [animating, setAnimating] = useState(false);
     const [lastColumnSticky, setLastColumnSticky] = useState(false)
     const [animationComplete, setAnimationCompleted] = useState(false);
@@ -46,13 +43,15 @@ const Table = ({columns, data}: { columns: Column[], data: any[] }) => {
     const [sortDirection, setSortDirection] = useState('');
     const table = createRef<HTMLTableElement>()
 
+    useEffect(() => {
+        checkTableOverlapping()
+        window.addEventListener("resize", debounce(checkTableOverlapping, 300));
+        return () => window.removeEventListener("resize", checkTableOverlapping);
+    }, [table])
+
     const checkTableOverlapping = () => {
         if(table.current) {
-            if ((table.current.getBoundingClientRect().right - STICKY_COLUMN_WIDTH / 2 ) >= window.innerWidth) {
-                setLastColumnSticky(true)
-            } else {
-                setLastColumnSticky(false)
-            }
+            setLastColumnSticky(table.current.getBoundingClientRect().right >= window.innerWidth)
         }
     }
 

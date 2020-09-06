@@ -30,9 +30,9 @@ const TBody = ({columns, data, animating, animationComplete}: TBodyProps) => {
     }
 
     return (
-        <TableBody animating={animating} animationComplete={animationComplete}>
+        <TableBody data-testid='tbody' animating={animating} animationComplete={animationComplete}>
             {data.map((row, rowIndex) => (
-                <tr key={rowIndex}>
+                <tr data-testid={`row-${rowIndex}`} key={rowIndex}>
                     {columns.map((column, columnIndex) => (cell(row, column, columnIndex)))}
                 </tr>
             ))}

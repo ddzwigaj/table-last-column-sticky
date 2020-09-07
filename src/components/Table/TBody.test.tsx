@@ -6,7 +6,7 @@ import TBody from "./TBody";
 afterEach(cleanup);
 
 describe("<TBody />", () => {
-    it('Table body should have opacity set to 0 if fade animation is not complete', async () => {
+    it('table body should have opacity set to 0 if fade animation is not complete', async () => {
         const { getByTestId } = render(
             <TBody
                 data={mockData.data}
@@ -20,7 +20,7 @@ describe("<TBody />", () => {
         expect(style.opacity).toBe('0')
     });
 
-    it('Table body should have opacity set to 1 if fade animation is complete', async () => {
+    it('table body should have opacity set to 1 if fade animation is complete', async () => {
         const { getByTestId } = render(
             <TBody
                 data={mockData.data}

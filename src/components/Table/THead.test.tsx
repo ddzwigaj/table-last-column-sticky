@@ -7,7 +7,7 @@ import THead from "./THead";
 afterEach(cleanup);
 
 describe("<THead />", () => {
-    it('clicking on sortable column should show sorted data alphabetically', async () => {
+    it('clicking on sortable column should fire request sort function', async () => {
         const requestSort = jest.fn()
         let sortColumn: Column;
 
